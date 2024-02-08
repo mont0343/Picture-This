@@ -15,9 +15,48 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+    <picture>
+            <!------- SQUARE IMAGE -------->
+      <source srcset="images/square/museum-800x800_square.jpg,
+                      images/square/museum-1600x1600_square.jpg 2x, 
+                      images/square/museum-2400x2400_square.jpg 3x" 
+              media="(min-width: 1600px)">
 
+      <source srcset="images/square/museum-640x640_square.jpg, 
+                      images/square/museum-1280x1280_square.jpg 2x, 
+                      images/square/museum-1920x1920_square.jpg 3x" 
+              media="(min-width: 1280px)">
+
+      <source srcset="images/square/museum-480x480_square.jpg, 
+                      images/square/museum-960x960_square.jpg 2x, 
+                      images/square/museum-1440x1440_square.jpg 3x" 
+              media="(min-width: 960px)">
+            <!------------------------------>
+
+            <!------- LANDSCAPE IMAGE -------->
+      <source srcset="images/landscape/museum-960x540_landscape.jpg,
+                      images/landscape/museum-1920x1080_landscape.jpg 2x, 
+                      images/landscape/museum-2880x1621_landscape.jpg 3x" 
+              media="(max-width: 959px)">
+
+      <source srcset="images/landscape/museum-720x405_landscape.jpg, 
+                      images/landscape/museum-1440x811_landscape.jpg 2x, 
+                      images/landscape/museum-2160x1216_landscape.jpg 3x" 
+              media="(max-width: 720px)">
+
+      <source srcset="images/landscape/museum-480x270_landscape.jpg, 
+                      images/landscape/museum-960x540_landscape.jpg 2x, 
+                      images/landscape/museum-1440x811_lanscape.jpg 3x" 
+              media="(max-width: 480px)">
+            
+      <source srcset="images/landscape/museum-320x180_landscape.jpg, 
+                      images/landscape/museum-640x360_landscape.jpg 2x, 
+                      images/landscape/museum-960x540_lanscape.jpg 3x" 
+              media="(max-width: 320px)">      
+              <!------------------------------>
+
+      <img class="img" src="images/museum-orig.jpg" alt="a picture of a museum">
+  </picture>
   </header>
 </body>
-
 </html>
